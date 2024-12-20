@@ -1,0 +1,153 @@
+@use "variables";
+
+.main-container {
+  .left-sidebar {
+    border-right: 1px variables.$lite-gray solid;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    &__top {
+      padding: 29px 35px 31px 32px;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 10px;
+      align-items: center;
+
+      &__growth-link {
+        display: flex;
+        align-items: center;
+        background-color: variables.$green;
+        padding: 5px 12px 5px 10px;
+        text-decoration: none;
+        color: #000000;
+        font-size: 12px;
+
+        svg {
+          margin-right: 2px;
+        }
+      }
+    }
+
+    &__menu {
+      padding: 0 24px 0 20px;
+      ul {
+        display: grid;
+        gap: 12px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+
+        li {
+          position: relative;
+
+          &.selected {
+            a {
+              color: #000;
+
+              svg {
+                fill: #000;
+              }
+            }
+
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              left: -17px;
+              top: 11px;
+              bottom: 11px;
+              width: 3px;
+              background-color: #000;
+              border-radius: 30px;
+            }
+          }
+
+          a {
+            display: flex;
+            align-items: center;
+            padding: 10px 12px;
+            color: variables.$base-gray;
+            font-weight: 500;
+            text-decoration: none;
+            border-radius: 12px;
+            transition-property: background-color;
+            transition-duration: 0.3s;
+
+            &:hover {
+              background-color: variables.$lite-gray;
+              color: #000;
+
+              svg {
+                fill: #000;
+              }
+            }
+
+            svg {
+              margin-right: 8px;
+              fill: variables.$base-gray;
+            }
+          }
+        }
+      }
+    }
+
+    &__account {
+      margin-top: auto;
+      margin-bottom: 30px;
+      padding: 20px 36px 20px 32px;
+      display: flex;
+      align-items: center;
+
+      &__avatar {
+        width: 32px;
+        height: 32px;
+        background-color: variables.$lite-gray;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        flex-shrink: 0;
+        margin-right: 10px;
+
+        &::after {
+          content: attr(data-count);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-width: 16px;
+          height: 16px;
+          background-color: variables.$red;
+          border-radius: 16px;
+          font-size: 9px;
+          color: #fff;
+          position: absolute;
+          right: -4px;
+          top: -4px;
+        }
+      }
+
+      &__info {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 32px;
+
+        &__name {
+          font-size: 14px;
+          line-height: 14px;
+        }
+
+        &__site {
+          font-size: 12px;
+          line-height: 16px;
+          color: variables.$base-gray;
+        }
+      }
+    }
+  }
+}

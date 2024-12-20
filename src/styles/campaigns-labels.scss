@@ -1,0 +1,76 @@
+@use "variables";
+
+.main-container {
+  .campaigns-labels {
+    display: flex;
+    flex-wrap: wrap;
+
+    .campaigns-label {
+      display: flex;
+      align-items: center;
+      border: 1px variables.$lite-gray solid;
+      padding: 5px 10px;
+      font-size: 12px;
+      line-height: 12px;
+      white-space: nowrap;
+      margin-right: 4px;
+      margin-top: 6px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &.status__label {
+        &::before {
+          content: "";
+          display: block;
+          width: 6px;
+          height: 6px;
+          margin-right: 6px;
+          border-radius: 100%;
+        }
+
+        &.status-active {
+          &::before {
+            background-color: variables.$green;
+          }
+        }
+
+        &.status-rejected {
+          &::before {
+            background-color: variables.$red;
+          }
+        }
+      }
+
+      &.social__label {
+        &::before {
+          content: "";
+          display: block;
+          width: 12px;
+          height: 12px;
+          margin-right: 6px;
+        }
+
+        &.social-fb {
+          &::before {
+            background-image: url("./../assets/icons/Facebook_Icon.svg");
+          }
+        }
+
+        &.social-inst {
+          &::before {
+            background-image: url("./../assets/icons/instagram_Icon.svg");
+          }
+        }
+      }
+    }
+
+    &.campaigns-labels--individual {
+      & .campaigns-label {
+        padding: 5px 8px;
+        margin-top: 4px;
+      }
+    }
+  }
+}
