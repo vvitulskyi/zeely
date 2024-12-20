@@ -1,9 +1,7 @@
-import photoOne from "./../assets/images/Photo_1.png";
-
 const individualResults = [
   {
     title: "Campaign",
-    image: photoOne,
+    image: "https://dummyimage.com/80x100/ccc/ccc",
     labels: [
       { name: "active", text: "Active until Feb 29, 2024" },
       { name: "fb", text: "Live on FB" },
@@ -23,7 +21,7 @@ const individualResults = [
   },
   {
     title: "Instagram stories, Kiev",
-    image: photoOne,
+    image: "https://dummyimage.com/80x100/ccc/ccc",
     labels: [{ name: "reject", text: "Rejected" }],
     checkbox: false,
     results: {
@@ -39,7 +37,7 @@ const individualResults = [
   },
   {
     title: "Instagram stories, Kiev two",
-    image: photoOne,
+    image: "https://dummyimage.com/80x100/ccc/ccc",
     labels: [{ name: "reject", text: "Rejected" }],
     checkbox: false,
     results: {

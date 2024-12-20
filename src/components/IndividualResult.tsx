@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import ArrowLink from "./../assets/icons/Arrow_link.svg?react";
-import photoOne from "./../assets/images/Photo_1.png";
 import { useCallback, useState } from "react";
 
 type TResult = {
@@ -40,7 +39,11 @@ export default function IndividualResult({ campaign }: { campaign: TResult }) {
     <>
       <div className="individual-results__list__full-row">
         <div className="individual-results__info__preview">
-          <img className="first-photo" src={photoOne} alt={result.title} />
+          <img
+            className="first-photo"
+            src={result.image}
+            alt={result.title}
+          />
         </div>
         <div className="individual-results__info__content">
           <div className="individual-results__info__header">{result.title}</div>

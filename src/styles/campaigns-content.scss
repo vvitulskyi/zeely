@@ -98,7 +98,11 @@
           top: 0;
           height: 100%;
           // background: linear-gradient(to left, blue, pink);
-          background: linear-gradient(to left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+          background: linear-gradient(
+            to left,
+            rgb(255, 255, 255),
+            rgba(255, 255, 255, 0)
+          );
         }
 
         .individual-results__header {
@@ -153,6 +157,13 @@
             padding-top: 21px;
             box-sizing: content-box;
             border-top: 1px variables.$lite-gray solid;
+
+            .individual-results__info__preview {
+              img {
+                border-radius: 8px;
+                border: 1px solid white;
+              }
+            }
 
             .individual-results__info__content {
               padding-left: 13px;

@@ -1,12 +1,17 @@
-import photoOne from "./../assets/images/Photo_1.png";
-import photoTwo from "./../assets/images/Photo_1.png";
-
 export default function Info() {
   return (
     <div className="content-body__info">
       <div className="content-body__info__preview">
-        <img className="first-photo" src={photoOne} alt="first" />
-        <img className="second-photo" src={photoTwo} alt="second" />
+        <img
+          className="first-photo"
+          src={"https://dummyimage.com/80x100/ccc/ccc"}
+          alt="first"
+        />
+        <img
+          className="second-photo"
+          src={"https://dummyimage.com/80x100/ccc/ccc"}
+          alt="second"
+        />
       </div>
       <div className="content-body__info__content">
         <div className="content-body__info__header">Campaign 1</div>
